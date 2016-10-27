@@ -1,5 +1,5 @@
 {
-    "name": "vincent/01_csvuserlist",
+    "name": "vincent/01_downloaduserlist",
     "description": "Teilnehmerliste Download",
     "license": "GPLv3",
     "authors": [
@@ -13,6 +13,6 @@
       "composer/installers": "~1.0"
     },
     "extra": {
-      "installer-name": "csvsuserlist"
+      "installer-name": "downloaduserlist"
     }
 }

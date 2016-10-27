@@ -10,10 +10,10 @@ $courseid = required_param('courseid', PARAM_INT);
 require_login($courseid);
 $context= get_context_instance(CONTEXT_COURSE,$courseid);
 if(!has_capability('moodle/course:manageactivities',$context)){
-	die(get_string('notrainer',"block_csvuserlist"));
+	die(get_string('notrainer',"block_downloaduserlist"));
 }
-$csvdata  =get_string("username","block_csvuserlist") . "," . get_string("firstname","block_csvuserlist") . "," . get_string("lastname","block_csvuserlist");
-$csvdata .="," . get_string("loginmethod","block_csvuserlist") . "," . get_string("firstlogin","block_csvuserlist") . "," . get_string("role","block_csvuserlist") . "\n";
+$csvdata  =get_string("username","block_downloaduserlist") . "," . get_string("firstname","block_downloaduserlist") . "," . get_string("lastname","block_downloaduserlist");
+$csvdata .="," . get_string("loginmethod","block_downloaduserlist") . "," . get_string("firstlogin","block_downloaduserlist") . "," . get_string("role","block_downloaduserlist") . "\n";
 $coursedata=$DB->get_record('course', array('id'=>$courseid), '*', MUST_EXIST);
 $manager = new course_enrolment_manager($PAGE,$coursedata);
 $users = $manager->get_users_for_display($manager,"id","asc",0,99999);

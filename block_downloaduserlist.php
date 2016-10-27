@@ -24,10 +24,10 @@
 error_reporting(true);
 defined('MOODLE_INTERNAL') || die();
 
-class block_csvuserlist extends block_base {
+class block_downloaduserlist extends block_base {
 
     function init() {
-        $this->title = get_string('pluginname', 'block_csvuserlist');
+        $this->title = get_string('pluginname', 'block_downloaduserlist');
     }
 
     function get_content() {
@@ -49,7 +49,7 @@ class block_csvuserlist extends block_base {
             $this->content = '';
             return $this->content;
         }
-        $this->content->text='<a target="_blank" href="/blocks/csvuserlist/download.php?courseid=' . $course->id . '">Download</a>';      
+        $this->content->text='<a target="_blank" href="/blocks/downloaduserlist/download.php?courseid=' . $course->id . '">Download</a>';      
         //user/view.php?id=3&course=2
         //$this->content->text = "Hier werde ich alles Anzeigen !";
 		  /*

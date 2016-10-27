@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * csvuserlist block caps.
+ * downloaduserlist block caps.
  *
- * @package   block_csvuserlist
+ * @package   block_downloaduserlist
  * @copyright Daniel Neis <danielneis@gmail.com>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -28,7 +28,7 @@ $capabilities = array(
 
     
 
-    'block/course/csvuserlist:addinstance' => array(
+    'block/course/downloaduserlist:addinstance' => array(
         'riskbitmask' => RISK_SPAM | RISK_XSS,
 
         'captype' => 'write',
