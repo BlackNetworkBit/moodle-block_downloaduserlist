@@ -1,5 +1,5 @@
 {
-    "name": "vincent/01_downloaduserlist",
+    "name": "moodle-block_downloaduserlist",
     "description": "Teilnehmerliste Download",
     "license": "GPLv3",
     "authors": [

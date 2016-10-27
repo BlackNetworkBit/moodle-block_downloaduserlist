@@ -19,7 +19,7 @@
  * Strings for component 'block_vsuserlist', language 'en'
  *
  * @package   block_vsuserlist
- * @copyright Daniel Neis <danielneis@gmail.com>
+ * @copyright Vincent Schneider <xx>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

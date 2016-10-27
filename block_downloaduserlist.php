@@ -15,10 +15,10 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * vsuserlist block caps.
+ * downloaduserlist block caps.
  *
- * @package    block_vsuserlist
- * @copyright  Daniel Neis <danielneis@gmail.com>
+ * @package    block_downloaduserlist
+ * @copyright  Vincent Schneider <xx>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 error_reporting(true);
@@ -50,30 +50,6 @@ class block_downloaduserlist extends block_base {
             return $this->content;
         }
         $this->content->text='<a target="_blank" href="/blocks/downloaduserlist/download.php?courseid=' . $course->id . '">Download</a>';      
-        //user/view.php?id=3&course=2
-        //$this->content->text = "Hier werde ich alles Anzeigen !";
-		  /*
-
-
-        // user/index.php expect course context, so get one if page has module context.
-        $currentcontext = $this->page->context->get_course_context(false);
-
-        if (! empty($this->config->text)) {
-            $this->content->text = $this->config->text;
-        }
-
-        $this->content = '';
-        if (empty($currentcontext)) {
-            return $this->content;
-        }
-        if ($this->page->course->id == SITEID) {
-            $this->content->text .= "site context";
-        }
-
-        if (! empty($this->config->text)) {
-            $this->content->text .= $this->config->text;
-        }*/
-		
         return $this->content;
     }
 

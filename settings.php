@@ -18,7 +18,7 @@
  * downloaduserlist block caps.
  *
  * @package    block_downloaduserlist
- * @copyright  Daniel Neis <danielneis@gmail.com>
+ * @copyright  Vincent Schneider <xx>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
