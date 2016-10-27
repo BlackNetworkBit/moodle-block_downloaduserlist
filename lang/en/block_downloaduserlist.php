@@ -23,14 +23,14 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['blockname'] = 'Teilnehmerliste-CSV';
-$string['csvuserlist:addinstance'] = 'Teilnehmerlist-CSV Hinzufügen';
-$string['csvuserlist:myaddinstance'] = 'Teilnehmerliste-CSV für mymoodle Hinzufügen';
-$string['pluginname'] = 'Teilnehmerliste-CSV';
-$string['username']='Benutzername';
-$string['firstname']='Vorname';
-$string['lastname']='Nachname';
-$string['loginmethod']='Login Methode';
-$string['firstlogin']='Erstes Login(Kurs)';
-$string['role']='Rolle';
-$string['notrainer']='Du bist kein Trainer !';
+$string['blockname'] = 'Userlist-CSV';
+$string['downloaduserlist:addinstance'] = 'Add a Userlist-CSV block';
+$string['downloaduserlist:myaddinstance'] = 'Add a Userlist-CSV block to my moodle';
+$string['pluginname'] = 'Userlist-CSV';
+$string['username']='Username';
+$string['firstname']='Firstname';
+$string['lastname']='Lastname';
+$string['loginmethod']='Login Method';
+$string['firstlogin']='First Login(course)';
+$string['role']='Role';
+$string['notrainer']='You are not a Trainer !';
