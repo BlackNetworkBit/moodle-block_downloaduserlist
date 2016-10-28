@@ -34,3 +34,4 @@ $string['loginmethod']='Login Methode';
 $string['firstlogin']='Erstes Login(Kurs)';
 $string['role']='Rolle';
 $string['notrainer']='Du bist kein Trainer !';
+$string['groups']='Gruppen';
