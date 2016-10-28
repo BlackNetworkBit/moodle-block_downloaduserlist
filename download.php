@@ -16,7 +16,7 @@ $csvdata  =get_string("username","block_downloaduserlist") . "," . get_string("f
 $csvdata .="," . get_string("loginmethod","block_downloaduserlist") . "," . get_string("firstlogin","block_downloaduserlist") . "," . get_string("role","block_downloaduserlist") . "\n";
 $coursedata=$DB->get_record('course', array('id'=>$courseid), '*', MUST_EXIST);
 $manager = new course_enrolment_manager($PAGE,$coursedata);
-$users = $manager->get_users_for_display($manager,"id","asc",0,99999);
+$users = $manager->get_users_for_display($manager,"id","asc",0,count_enrolled_users($context));
 foreach ($users as $userid=>&$user) {
 	$data = array_values($user['enrolments'])[0];
 	$enrolment_date=array_values($manager->get_user_enrolments(intval($user['userid'])));
