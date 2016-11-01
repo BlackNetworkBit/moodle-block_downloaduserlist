@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -22,16 +21,15 @@
  * @copyright Vincent Schneider <xx>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
 $string['blockname'] = 'Teilnehmerliste-CSV';
 $string['downloaduserlist:addinstance'] = 'Teilnehmerlist-CSV Hinzufügen';
 $string['downloaduserlist:myaddinstance'] = 'Teilnehmerliste-CSV für mymoodle Hinzufügen';
 $string['pluginname'] = 'Teilnehmerliste-CSV';
-$string['username']='Benutzername';
-$string['firstname']='Vorname';
-$string['lastname']='Nachname';
-$string['loginmethod']='Login Methode';
-$string['firstlogin']='Erstes Login(Kurs)';
-$string['role']='Rolle';
-$string['notrainer']='Du bist kein Trainer !';
-$string['groups']='Gruppen';
+$string['username'] = 'Benutzername';
+$string['firstname'] = 'Vorname';
+$string['lastname'] = 'Nachname';
+$string['loginmethod'] = 'Login Methode';
+$string['firstlogin'] = 'Erstes Login(Kurs)';
+$string['role'] = 'Rolle';
+$string['notrainer'] = 'Du bist kein Trainer !';
+$string['groups'] = 'Gruppen';

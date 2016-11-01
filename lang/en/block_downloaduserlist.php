@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -22,16 +21,15 @@
  * @copyright Vincent Schneider <xx>
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
 $string['blockname'] = 'Userlist-CSV';
 $string['downloaduserlist:addinstance'] = 'Add a Userlist-CSV block';
 $string['downloaduserlist:myaddinstance'] = 'Add a Userlist-CSV block to my moodle';
 $string['pluginname'] = 'Userlist-CSV';
-$string['username']='Username';
-$string['firstname']='Firstname';
-$string['lastname']='Lastname';
-$string['loginmethod']='Login Method';
-$string['firstlogin']='First Login(course)';
-$string['role']='Role';
-$string['notrainer']='You are not a Trainer !';
-$string['groups']='Groups';
+$string['username'] = 'Username';
+$string['firstname'] = 'Firstname';
+$string['lastname'] = 'Lastname';
+$string['loginmethod'] = 'Login Method';
+$string['firstlogin'] = 'First Login(course)';
+$string['role'] = 'Role';
+$string['notrainer'] = 'You are not a Trainer !';
+$string['groups'] = 'Groups';

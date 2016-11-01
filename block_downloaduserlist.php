@@ -21,25 +21,21 @@
  * @copyright  Vincent Schneider <xx>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-error_reporting(true);
 defined('MOODLE_INTERNAL') || die();
-
 class block_downloaduserlist extends block_base {
-
-    function init() {
+    public function init() {
         $this->title = get_string('pluginname', 'block_downloaduserlist');
     }
-
-    function get_content() {
-        global $CFG, $USER,$DB;
+    public function get_content() {
+        global $CFG, $USER, $DB;
 
         if ($this->content !== null) {
             return $this->content;
         }
-        $course=$this->page->course;
-        $context= get_context_instance(CONTEXT_COURSE,$course->id);
-        if(!has_capability('moodle/course:manageactivities',$context)){
-        		return;
+        $course = $this->page->course;
+        $context = get_context_instance(CONTEXT_COURSE, $course->id);
+        if (!has_capability('moodle/course:manageactivities', $context)) {
+            return;
         }
         $this->content = new stdClass();
         $this->content->items = array();
@@ -49,32 +45,31 @@ class block_downloaduserlist extends block_base {
             $this->content = '';
             return $this->content;
         }
-        $this->content->text='<a target="_blank" href="/blocks/downloaduserlist/download.php?courseid=' . $course->id . '">Download</a>';      
+        $this->content->text = '<a target="_blank" href="/blocks/downloaduserlist/download.php?courseid=' . $course->id;
+        $this->content->text .= '">Download</a>';
         return $this->content;
     }
-
-    // my moodle can only have SITEID and it's redundant here, so take it away
+    // My moodle can only have SITEID and it's redundant here, so take it away.
     public function applicable_formats() {
         return array('all' => false,
                      'site' => true,
                      'site-index' => true,
-                     'course-view' => true, 
+                     'course-view' => true,
                      'course-view-social' => false,
-                     'mod' => true, 
+                     'mod' => true,
                      'mod-quiz' => false);
     }
 
     public function instance_allow_multiple() {
-          return true;
+        return true;
     }
 
-    function has_config() {return true;}
+    public function has_config() {
+        return true;
+    }
 
     public function cron() {
-            mtrace( "Hey, my cron script is running" );
-             
-                 // do something
-                  
-                      return true;
+        mtrace( "Hey, my cron script is running" );
+        return true;
     }
 }
