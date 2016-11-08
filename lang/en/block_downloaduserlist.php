@@ -33,3 +33,4 @@ $string['firstlogin'] = 'First Login(course)';
 $string['role'] = 'Role';
 $string['notrainer'] = 'You are not a Trainer !';
 $string['groups'] = 'Groups';
+$string['download'] = 'Download';

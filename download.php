@@ -24,11 +24,11 @@ require_once("$CFG->dirroot/cohort/locallib.php");
 global $OUTPUT, $DB, $USER;
 $courseid = required_param('courseid', PARAM_INT);
 require_login($courseid);
-$context = get_context_instance(CONTEXT_COURSE, $courseid);
+$context = context_course::instance($courseid);
 if (!has_capability('moodle/course:manageactivities', $context)) {
     die(get_string('notrainer', "block_downloaduserlist"));
 }
-
+$PAGE->set_url($CFG->wwwroot . '/blocks/downloaduserlist/download.php?courseid=' . $courseid);
 // This code part search's for groups and put them into a list based on the userid.
 $userpool = array();
 $sql = "SELECT c.*, ".context_helper::get_preload_record_columns_sql('ctx') . " FROM {cohort} c JOIN {context} ";
@@ -38,7 +38,7 @@ foreach ($cohortdata as $cohort) {
     $cohort = $DB->get_record('cohort', array('id' => $cohort->id), '*', MUST_EXIST);
     $contextcohort = context::instance_by_id($cohort->contextid, MUST_EXIST);
     $existinguserselector = new cohort_existing_selector('', array('cohortid' => $cohort->id, 'accesscontext' => $contextcohort));
-    $userdata = array_values($existinguserselector->find_users())[0];
+    $userdata = array_values($existinguserselector->find_users(0))[0];
     foreach ($userdata as $user) {
         $userpool[$user->id][] = $cohort->name; // Add another group to a user-array.
     }

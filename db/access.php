@@ -23,7 +23,7 @@
  */
 defined('MOODLE_INTERNAL') || die();
 $capabilities = array(
-    'block/course/downloaduserlist:addinstance' => array(
+    'block/downloaduserlist:addinstance' => array(
         'riskbitmask' => RISK_SPAM | RISK_XSS,
 
         'captype' => 'write',

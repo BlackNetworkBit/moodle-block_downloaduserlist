@@ -33,7 +33,7 @@ class block_downloaduserlist extends block_base {
             return $this->content;
         }
         $course = $this->page->course;
-        $context = get_context_instance(CONTEXT_COURSE, $course->id);
+        $context = context_course::instance($course->id);
         if (!has_capability('moodle/course:manageactivities', $context)) {
             return;
         }
@@ -45,11 +45,12 @@ class block_downloaduserlist extends block_base {
             $this->content = '';
             return $this->content;
         }
-        $this->content->text = '<a target="_blank" href="/blocks/downloaduserlist/download.php?courseid=' . $course->id;
-        $this->content->text .= '">Download</a>';
+        $path = $CFG->wwwroot . '/blocks/downloaduserlist/download.php?courseid=' . $course->id;
+        $this->content->text = html_writer::start_tag('a', array('target' => '_blank', 'href' => $path));
+        $this->content->text .= get_string('download', 'block_downloaduserlist');
+        $this->content->text .= html_writer::end_tag('a');
         return $this->content;
     }
-    // My moodle can only have SITEID and it's redundant here, so take it away.
     public function applicable_formats() {
         return array('all' => false,
                      'site' => true,
@@ -58,18 +59,5 @@ class block_downloaduserlist extends block_base {
                      'course-view-social' => false,
                      'mod' => true,
                      'mod-quiz' => false);
-    }
-
-    public function instance_allow_multiple() {
-        return true;
-    }
-
-    public function has_config() {
-        return true;
-    }
-
-    public function cron() {
-        mtrace( "Hey, my cron script is running" );
-        return true;
     }
 }
